@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', sans-serif;
+    background-color: #30192F;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FE3D6C'/%3E%3Cstop offset='1' stop-color='%2330192F'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FC9995' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FC9995' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.43'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    width: 20rem;
+    height: 18rem;
+}
+
+span {
+    position: absolute;
+    z-index: 1;
+    width: 7rem;
+    background: #fefdfb;
+    height: 8rem;
+    text-align: center;
+    transform: rotate(-45deg);
+}
+
+h1{
+    margin: 0;
+    font-size: 2.45rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: transparent;
+    background: #b63667;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    text-shadow: 0 0.125rem 0 #ff6678;
+}
+
+.heart{
+    position: relative;
+}
+
+.heart .shape{
+    position: absolute;
+    top: 4rem;
+    left: 5rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem 0;
+    background: #fefdfb;
+    transform: rotate(45deg);
+}
+
+.heart .shape:nth-child(2){
+    z-index: -2;
+    top: 5.5rem;
+    left: 5rem;
+    width: 10.5rem;
+    height: 10rem;
+    background: #f2a9b7;
+}
+
+.heart .shape:nth-child(3){
+    z-index: -1;
+    top: 4.75rem;
+    left: 5rem;
+    width: 10rem;
+    height: 9.5rem;
+    background: #c6839b;
+}
+
+.heart .shape::before, 
+.heart .shape::after{
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart .shape::before{
+    right: 5rem;
+}
+.heart .shape::after{
+    bottom: 5rem;
+}
